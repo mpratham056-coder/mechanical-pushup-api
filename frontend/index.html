@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Engineering & Push-Up API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>⚙️ Mechanical Engineering & Push-Up API</h1>
+        <p>Engineering calculations and fitness tracking powered by FastAPI</p>
+    </header>
+
+    <main>
+
+        <!-- API Status -->
+        <section class="card">
+            <h2>🟢 API Status</h2>
+            <button id="statusBtn">Check API Status</button>
+            <p id="statusResult"></p>
+        </section>
+
+
+        <!-- Pressure Calculator -->
+        <section class="card">
+            <h2>🔩 Pressure Calculator</h2>
+            <p class="description">
+                Calculate pressure using: <strong>P = F / A</strong>
+            </p>
+
+            <div class="input-group">
+                <label for="force">Force (N)</label>
+                <input type="number" id="force" placeholder="Enter force" step="any">
+            </div>
+
+            <div class="input-group">
+                <label for="area">Area (m²)</label>
+                <input type="number" id="area" placeholder="Enter area" step="any">
+            </div>
+
+            <button id="calculateBtn">Calculate Pressure</button>
+
+            <div id="calculationResult" class="result">
+                <!-- Result will appear here -->
+            </div>
+        </section>
+
+
+        <!-- Push-Up Tracker -->
+        <section class="card pushup-card">
+            <h2>💪 Push-Up Tracker</h2>
+            <p class="description">
+                Track muscle force during push-ups using:
+                <strong>F = m × g × leverage_ratio (0.69)</strong>
+            </p>
+
+            <div class="input-group">
+                <label for="bodyWeight">Body Weight (kg)</label>
+                <input type="number" id="bodyWeight" placeholder="e.g. 70" step="any" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="reps">Reps per Set</label>
+                <input type="number" id="reps" placeholder="e.g. 15" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="sets">Number of Sets</label>
+                <input type="number" id="sets" placeholder="e.g. 3" min="1">
+            </div>
+
+            <button id="pushupBtn">Calculate Force & Log Session</button>
+
+            <div id="pushupResult" class="result">
+                <!-- Result will appear here -->
+            </div>
+        </section>
+
+
+        <!-- Push-Up Sessions History -->
+        <section class="card">
+            <h2>📋 Session History</h2>
+            <button id="sessionsBtn">Load Sessions</button>
+            <div id="sessionsResult" class="result">
+                <!-- Sessions will appear here -->
+            </div>
+        </section>
+
+
+        <!-- Send Mechanical Data -->
+        <section class="card">
+            <h2>📤 Send Mechanical Data</h2>
+
+            <div class="input-group">
+                <label for="dataName">Parameter Name</label>
+                <input type="text" id="dataName" placeholder="Example: Temperature">
+            </div>
+
+            <div class="input-group">
+                <label for="dataValue">Value</label>
+                <input type="number" id="dataValue" placeholder="Enter value" step="any">
+            </div>
+
+            <button id="sendDataBtn">Send Data</button>
+
+            <div id="dataResult" class="result">
+                <!-- Result will appear here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mechanical Engineering & Push-Up API © 2026 | Built with FastAPI 🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

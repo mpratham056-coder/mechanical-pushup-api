@@ -1,0 +1,245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+header {
+    background: linear-gradient(135deg, #1f2937 0%, #1e3a5f 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #d1d5db;
+    font-size: 1rem;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 720px;
+    margin: 30px auto;
+}
+
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2563eb;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+}
+
+.pushup-card {
+    border-left-color: #16a34a;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.description {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+/* Inputs */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    background: #fafafa;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+}
+
+
+/* Buttons */
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.3px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.pushup-card button {
+    background: #16a34a;
+}
+
+.pushup-card button:hover {
+    background: #15803d;
+}
+
+
+/* Results */
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    min-height: 24px;
+    line-height: 1.7;
+}
+
+.result div {
+    margin-bottom: 4px;
+}
+
+.success {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.error {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.highlight-value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #1e3a5f;
+    padding: 8px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.pushup-force {
+    color: #15803d;
+}
+
+
+/* Sessions Table */
+
+.sessions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-top: 8px;
+}
+
+.sessions-table th {
+    background: #1f2937;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.sessions-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sessions-table tr:nth-child(even) td {
+    background: #f3f4f6;
+}
+
+.sessions-table tr:hover td {
+    background: #dbeafe;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        width: 96%;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .sessions-table {
+        font-size: 0.75rem;
+    }
+
+    .sessions-table th,
+    .sessions-table td {
+        padding: 6px 6px;
+    }
+}
