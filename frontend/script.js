@@ -21,7 +21,7 @@ statusBtn.addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch(`${API_URL}/`);
+        const response = await fetch(`${API_URL}/api`);
 
         if (!response.ok) {
             throw new Error("Server returned an error");

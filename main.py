@@ -40,11 +40,22 @@ class PushUpSession(BaseModel):
 
 
 # ============================================================
-# Root — Mechanical API status
+# Root — Serve Frontend UI
 # ============================================================
 
-@app.get("/", tags=["General"])
+@app.get("/", include_in_schema=False)
 def home():
+    """Serve the frontend HTML at root so the UI loads immediately."""
+    frontend_index = os.path.join(os.path.dirname(__file__), "frontend", "index.html")
+    return FileResponse(frontend_index)
+
+
+# ============================================================
+# API Status endpoint (JSON)
+# ============================================================
+
+@app.get("/api", tags=["General"])
+def api_status():
     return {
         "message": "Mechanical Engineering & Push-Up API is running",
         "version": "2.0.0",

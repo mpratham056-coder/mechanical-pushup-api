@@ -111,3 +111,4 @@ curl http://127.0.0.1:8000/pushup/sessions
 ## 📄 License
 
 MIT License © 2026
+
